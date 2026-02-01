@@ -1,0 +1,151 @@
+/* Custom CSS styles for Jarons Games */
+
+/* Enhanced title styling */
+h1#title {
+  font-size: 4rem !important;
+  font-weight: 900 !important;
+  background: linear-gradient(135deg, var(--accent-color), var(--secondary-color), #ff6b6b, var(--accent-color)) !important;
+  background-size: 300% 300% !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+  margin-bottom: 15px !important;
+  text-shadow: 0 0 40px rgba(199, 125, 255, 0.6) !important;
+  animation: gradientShift 4s ease-in-out infinite, titleGlow 2s ease-in-out infinite alternate !important;
+  letter-spacing: 2px !important;
+  position: relative !important;
+  text-transform: uppercase !important;
+}
+
+/* Animated gradient background */
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Pulsing glow effect */
+@keyframes titleGlow {
+  from {
+    filter: drop-shadow(0 0 20px rgba(199, 125, 255, 0.8));
+    transform: scale(1);
+  }
+  to {
+    filter: drop-shadow(0 0 35px rgba(224, 170, 255, 0.9));
+    transform: scale(1.02);
+  }
+}
+
+/* Add decorative elements around title */
+h1#title::before {
+  content: '' !important;
+  position: absolute !important;
+  top: -10px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 100px !important;
+  height: 3px !important;
+  background: linear-gradient(90deg, transparent, var(--accent-color), transparent) !important;
+  animation: lineGlow 2s ease-in-out infinite !important;
+}
+
+h1#title::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: -10px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 100px !important;
+  height: 3px !important;
+  background: linear-gradient(90deg, transparent, var(--secondary-color), transparent) !important;
+  animation: lineGlow 2s ease-in-out infinite 1s !important;
+}
+
+@keyframes lineGlow {
+  0%, 100% {
+    opacity: 0.3;
+    width: 100px;
+  }
+  50% {
+    opacity: 1;
+    width: 150px;
+  }
+}
+
+/* Enhanced subtitle styling */
+#subtitle {
+  font-size: 1.3rem;
+  background: linear-gradient(90deg, var(--secondary-color), var(--accent-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 400;
+  margin-top: 20px;
+  opacity: 0.9;
+  letter-spacing: 1px;
+  animation: subtitlePulse 3s ease-in-out infinite;
+}
+
+@keyframes subtitlePulse {
+  0%, 100% {
+    opacity: 0.8;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+}
+
+/* Add glow effect to game images on hover */
+.game img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(199, 125, 255, 0.4);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar:horizontal {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
+/* Add subtle animation to game cards */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.game {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Enhanced search input placeholder */
+#searchInput::placeholder {
+  color: var(--secondary-color);
+  opacity: 0.7;
+}

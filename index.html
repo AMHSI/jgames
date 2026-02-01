@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="icon" type="image/png" href="Bmusslogo.png" />
+    <link rel="stylesheet" href="config/main.css" />
+    <script src="config/main.js" type="module"></script>
+  </head>
+  <body>
+    <div class="center">
+      <h1 id="title"></h1>
+      <p id="subtitle"></p>
+    </div>
+    
+    <!-- Featured Games Slideshow -->
+    <div class="slideshow-container">
+      <button class="slide-prev" onclick="window.changeSlide(-1)">❮</button>
+      <button class="slide-next" onclick="window.changeSlide(1)">❯</button>
+      <div class="slide-dots"></div>
+    </div>
+
+    <!-- Site Features -->
+    <div class="features-section">
+      <div class="feature-card">
+        <h3>🎮 Huge Library</h3>
+        <p>Access hundreds of amazing games</p>
+      </div>
+      <div class="feature-card">
+        <h3>⚡ Instant Play</h3>
+        <p>No downloads, just click and play</p>
+      </div>
+      <div class="feature-card">
+        <h3>🔍 Smart Search</h3>
+        <p>Find your favorite games instantly</p>
+      </div>
+    </div>
+
+    <!-- Controls Section -->
+    <div class="controls-section">
+      <div class="controls-wrapper">
+        <input type="text" id="searchInput" placeholder="Search games" />
+        <div class="filter-buttons">
+          <button class="filter-btn active" data-category="all">All Games</button>
+          <button class="filter-btn" data-category="action">Action</button>
+          <button class="filter-btn" data-category="puzzle">Puzzle</button>
+          <button class="filter-btn" data-category="adventure">Adventure</button>
+        </div>
+        <button id="themeToggle" class="theme-toggle">🌙 Dark Mode</button>
+      </div>
+    </div>
+
+    <!-- Game Stats -->
+    <div class="stats-section">
+      <div class="stat-item">
+        <span class="stat-number" id="totalGames">0</span>
+        <span class="stat-label">Total Games</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" id="categoriesCount">4</span>
+        <span class="stat-label">Categories</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number" id="playersOnline">127</span>
+        <span class="stat-label">Players Online</span>
+      </div>
+    </div>
+
+    <div id="gamesContainer"></div>
+    <div class="footer">
+      <p style="font-weight: 700; color: var(--secondary-color);">© 2026 Jaron's Games</p>
+    </div>
+  </body>
+</html>
+
